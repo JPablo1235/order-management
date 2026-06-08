@@ -22,11 +22,14 @@ public class Order {
 
     private String customerName;
 
+    private String productName;
+
+    private Integer quantity;
+
     private String shippingAddress;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
     private LocalDateTime createdAt;
-
 }

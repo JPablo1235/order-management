@@ -18,11 +18,12 @@ public class OrderService {
 
     public Order create(Order order) {
 
-        order.setStatus(OrderStatus.PENDIENTE);
-        order.setCreatedAt(LocalDateTime.now());
+    order.setStatus(OrderStatus.PENDIENTE);
 
-        return repository.save(order);
-    }
+    order.setCreatedAt(LocalDateTime.now());
+
+    return repository.save(order);
+}
 
     public List<Order> findAll() {
         return repository.findAll();
